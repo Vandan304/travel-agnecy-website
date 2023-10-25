@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel-agency</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+        
+</head>
+<body>
+    <header>
+        <i class="fa-solid fa-bars" id="menu-bar"></i>
+       
+        <a href="#" class="logo"><span>PRAYOSHA </span>tours & travels</a>
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#book">book</a>
+            <a href="#package">package</a>
+            <a href="#services">services</a>
+            <a href="#gallary">gallary</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+        </nav>
+        <div class="icon">
+            <i class="fa-solid fa-magnifying-glass" id="search-btn"></i>
+            <i class="fa-solid fa-user" id="login-btn"></i>
+            <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
+
+        </div>
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here......">
+            <label for="search-bar"class="fa-solid fa-magnifying-glass"onclick="mess()" ></label>
+        </form>
+       <!-- cart -->
+       <div class="cart">
+        <h2 class="cart-title">Your Package</h2>
+        <!-- content -->
+        <div class="cart-content">
+            <div class="cart-box">
+                
+            
+            </div>
+            
+        </div>
+        <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">rs.0</div>
+            <!-- buy button -->
+            <button type="button" class="btn-buy" onclick="printbook()">Buy Now</button>
+            <!-- cart close -->
+            <i class="fa-solid fa-xmark" id="close-cart"></i>
+        </div>
+       </div>
+    </header>
+
+    <div class="login-form-container">
+        <i class="fa-solid fa-xmark" id="form-close"></i>
+        <form action="">
+            <h3>Login</h3>
+            <input type="email" class="box" placeholder="Enter your Email" required>
+            <input type="password" class="box" placeholder="Enter your password" min="10" required>
+            <input type="submit" value="Login Now" onclick="message()" class="btn">
+            <input type="checkbox" id="remember" required>
+            <label for="remember">remember me</label>
+            <p>forgot password? <a href="#">click here</a></p>
+            <p>Don't have an account? <a href="#">register now</a></p>
+        </form>
+    </div>
+    <!-- homesectionstart -->
+    <section class="home" id="home">
+        <div class="content">
+        <h3>adventure is worthwhile</h3>
+        <p>dicover new places with us ,adventure awaits</p>
+        <a href="#package" class="btn">Dicover more </a>
+    </div>
+    <div class="controls">
+        <span class="vid-btn" data-src="video.mp4"></span>
+    </div>
+    <div class="video-container">
+       <video src="video.mp4" loop autoplay muted></video>
+    </div>
+    </section>
+
+    <!-- homesectionend -->
+    <!-- booksection -->
+    <section class="book" id="book">
+        <h1 class="heading">
+            <span>b</span>
+            <span>o</span>
+            <span>o</span>
+            <span>k</span>
+            <span class="space"></span>
+            <span>n</span>
+            <span>o</span>
+            <span>w</span>
+        </h1>
+        <div class="row">
+            <div class="image">
+                <img src="travel.png" alt="">
+            </div>
+            <form action="">
+                <div class="inputbox">
+                    <h3>Where to</h3>
+                    <input type="text" placeholder="place name" required>
+                </div>
+                <div class="inputbox">
+                    <h3>how many</h3>
+                    <input type="number" min= "1" max="50" placeholder="number of guests"  required>
+                </div>
+                <div class="inputbox">
+                    <h3>arrivals</h3>
+                    <input type="date"  required>
+                </div>
+                <div class="inputbox">
+                    <h3>leaving</h3>
+                    <input type= "date" min="2023-10-26">
+                </div>
+                <input type="submit" class="btn" value="book now" onclick="showMessage()">
+            </form>
+        </div>
+    </section>
+    <!-- packagesectionstart -->
+    <section class="package" id="package">
+        <h1 class="heading">
+            <span>p</span>
+            <span>a</span>
+            <span>c</span>
+            <span>k</span>
+            <span>a</span>
+            <span>g</span>
+            <span>e</span>
+            <span>s</span>
+            
+        </h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="product1.png" alt="" class="product-img">
+                <div class="content">
+                    <h3 class="product-title"><i class="fa-solid fa-location-dot" ></i>mumbai</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, deserunt.</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="price"> rs.10000.00 <span>rs.15000.00</span></div>
+                    <i class="fa-solid fa-cart-plus btn "></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="product2.png" alt="" class="product-img">
+                <div class="content">
+                    <h3 class="product-title"><i class="fa-solid fa-location-dot" ></i>delhi</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, deserunt.</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="price"> rs.15000.00 <span>rs.20000.00</span></div>
+                    <i class="fa-solid fa-cart-plus btn"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="product3.png" alt="" class="product-img">
+                <div class="content">
+                    <h3 class="product-title"><i class="fa-solid fa-location-dot" ></i>chardham</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, deserunt.</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        
+                    </div>
+                    <div class="price"> rs.45000.00 <span>rs.50000.00</span></div>
+                    <i class="fa-solid fa-cart-plus btn"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="product4.png" alt="" class="product-img">
+                <div class="content">
+                    <h3 class="product-title"><i class="fa-solid fa-location-dot " ></i>rameshwaram</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, deserunt.</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="price"> rs.35000.00</div>
+                    <i class="fa-solid fa-cart-plus btn"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="product5.png" alt="" class="product-img">
+                <div class="content">
+                    <h3 class="product-title"><i class="fa-solid fa-location-dot" ></i>goa</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, deserunt.</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        
+                    </div>
+                    <div class="price"> rs.45000.00 <span>rs.50000.00</span></div>
+                    <i class="fa-solid fa-cart-plus btn"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="product6.png" alt="" class="product-img">
+                <div class="content">
+                    <h3 class="product-title"><i class="fa-solid fa-location-dot"></i>kashmir</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, deserunt.</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="price"> rs.55000.00 <span>rs.60000.00</span></div>
+                    <i class="fa-solid fa-cart-plus btn"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="product8.png" alt="" class="product-img">
+                <div class="content">
+                    <h3 class="product-title"><i class="fa-solid fa-location-dot" ></i>dubai</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, deserunt.</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <div class="price"> rs.100000.00 <span>rs.120000.00</span></div>
+                    <i class="fa-solid fa-cart-plus btn"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="product7.png" alt="" class="product-img">
+                <div class="content">
+                    <h3 class="product-title"><i class="fa-solid fa-location-dot" ></i>bangkok</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, deserunt.</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="price"> rs.110000.00 <span>rs.130000.00</span></div>
+                    <i class="fa-solid fa-cart-plus btn"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="product9.png" alt="" class="product-img">
+                <div class="content">
+                    <h3 class="product-title"><i class="fa-solid fa-location-dot" ></i>singapor</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, deserunt.</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <div class="price"> rs.130000.00 <span>rs.150000.00</span></div>
+                    <i class="fa-solid fa-cart-plus btn"></i>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!-- servicessectionstarts -->
+    <section class="services" id="services">
+        <h1 class="heading">
+            <span>s</span>
+            <span>e</span>
+            <span>r</span>
+            <span>v</span>
+            <span>i</span>
+            <span>c</span>
+            <span>e</span>
+            <span>s</span>
+            
+        </h1>
+        <div class="box-container">
+            <div class="box">
+                <i class="fa-solid fa-hotel"></i>
+                <h3>affordable hotel</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat odit eveniet libero. Error praesentium doloribus autem, aliquam dolor quod amet blanditiis tempora magni culpa quam dicta, ratione dignissimos fugiat sapiente?</p>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-utensils"></i>
+                <h3>food and drinks</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat odit eveniet libero. Error praesentium doloribus autem, aliquam dolor quod amet blanditiis tempora magni culpa quam dicta, ratione dignissimos fugiat sapiente?</p>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-bullhorn"></i>
+                <h3>safety guide</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat odit eveniet libero. Error praesentium doloribus autem, aliquam dolor quod amet blanditiis tempora magni culpa quam dicta, ratione dignissimos fugiat sapiente?</p>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-earth-asia"></i>
+                <h3>around the world</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat odit eveniet libero. Error praesentium doloribus autem, aliquam dolor quod amet blanditiis tempora magni culpa quam dicta, ratione dignissimos fugiat sapiente?</p>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-plane"></i>
+                <h3>fastest travel</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat odit eveniet libero. Error praesentium doloribus autem, aliquam dolor quod amet blanditiis tempora magni culpa quam dicta, ratione dignissimos fugiat sapiente?</p>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-person-hiking"></i>
+                <h3>adventures</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat odit eveniet libero. Error praesentium doloribus autem, aliquam dolor quod amet blanditiis tempora magni culpa quam dicta, ratione dignissimos fugiat sapiente?</p>
+            </div>
+        </div>
+    </section>
+    <!-- gallarysectionstarts -->
+    <section class="gallary" id="gallary">
+        <h1 class="heading">
+            <span>g</span>
+            <span>a</span>
+            <span>l</span>
+            <span>l</span>
+            <span>a</span>
+            <span>r</span>
+            <span>y</span>
+            
+            
+        </h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="g1.png" alt="">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, iure?</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="g2.png" alt="">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, iure?</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="g3.png" alt="">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, iure?</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="g4.png" alt="">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, iure?</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="g5.png" alt="">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, iure?</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="g6.png" alt="">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, iure?</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- reviewsectionstarts -->
+    <section class="review" id="review">
+        
+            <h1 class="heading">
+                <span>r</span>
+                <span>e</span>
+                <span>v</span>
+                <span>i</span>
+                <span>w</span>
+                <span>e</span>
+                
+                
+                
+            </h1>
+           
+                
+                <div class="review_box">
+                    
+                    <div class="review_card">
+                        <div class="review_profile">
+                            <img src="ujju.jpg" alt="">
+                        </div>
+                        <div class="review_text">
+                            <h2 class="name">Ujjaval</h2>
+                            <div class="review_icon">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                
+                            </div>
+                            <div class="review_social">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem hic optio perferendis impedit! Porro sunt, at quae in reprehenderit cupiditate quisquam aliquam maxime, labore natus animi, culpa optio nulla aperiam est excepturi aliquid eveniet?</p>
+                        </div>
+                    </div>
+                    <div class="review_card">
+                        <div class="review_profile">
+                            <img src="vandan.jpeg" alt="">
+                        </div>
+                        <div class="review_text">
+                            <h2 class="name">Vandan</h2>
+                            <div class="review_icon">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                
+                            </div>
+                            <div class="review_social">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem hic optio perferendis impedit! Porro sunt, at quae in reprehenderit cupiditate quisquam aliquam maxime, labore natus animi, culpa optio nulla aperiam est excepturi aliquid eveniet?</p>
+                        </div>
+                    </div>
+                    <div class="review_card">
+                        <div class="review_profile">
+                            <img src="tarun.jpeg" alt="">
+                        </div>
+                        <div class="review_text">
+                            <h2 class="name">Tarun</h2>
+                            <div class="review_icon">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                
+                            </div>
+                            <div class="review_social">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem hic optio perferendis impedit! Porro sunt, at quae in reprehenderit cupiditate quisquam aliquam maxime, labore natus animi, culpa optio nulla aperiam est excepturi aliquid eveniet?</p>
+                        </div>
+                    </div>
+                    <div class="review_card">
+                        <div class="review_profile">
+                            <img src="kush.jpeg" alt="">
+                        </div>
+                        <div class="review_text">
+                            <h2 class="name">Kush</h2>
+                            <div class="review_icon">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                
+                            </div>
+                            <div class="review_social">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem hic optio perferendis impedit! Porro sunt, at quae in reprehenderit cupiditate quisquam aliquam maxime, labore natus animi, culpa optio nulla aperiam est excepturi aliquid eveniet?</p>
+                        </div>
+                    </div>
+    
+    
+                
+              </div>
+              <!-- contsctsectionstartds -->
+              <section class="contact" id="contact">
+                <h1 class="heading">
+                    <span>c</span>
+                    <span>o</span>
+                    <span>n</span>
+                    <span>t</span>
+                    <span>a</span>
+                    <span>c</span>
+                    <span>t</span>
+                    
+                    
+                </h1>
+                <div class="row">
+                    <div class="image">
+                        <img src="contact.png" alt="">
+                    </div>
+                    <form action="">
+                        <div class="inputbox">
+                            <input type="text" placeholder="name" required>
+                            <input type="email" placeholder="email" required>
+                        </div>
+                        <div class="inputbox">
+                            <input type="number" placeholder="number" min="0" required >
+                            <input type="text" placeholder="subject" required>
+                        </div>
+                        <textarea placeholder="messege" name="" id="" cols="30" rows="10" ></textarea>
+                        <input type="submit" class="btn" value="send messege" onclick="printMessage()">
+                    </form>
+                </div>
+              </section>
+              <!-- ourteamsectionstart -->
+              <section class="our team">
+                <h1 class="heading">
+                    <span>o</span>
+                    <span>u</span>
+                    <span>r</span>
+                    <span class="space"></span>
+                    <span>t</span>
+                    <span>e</span>
+                    <span>a</span>
+                    <span>m</span>
+                </h1>
+                  
+                <div class="team">
+                      
+                    <div class="team_box">
+                          <div class="profile">
+                              <img src="patil.jpeg" alt="">
+                              <div class="info">
+                                  <h2 class="name">harsh patil</h2>
+                                  <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                  <div class="team_icon">
+                                      <i class="fa-brands fa-facebook"></i>
+                                      <i class="fa-brands fa-instagram"></i>
+                                      <i class="fa-brands fa-twitter"></i>
+                                      <i class="fa-brands fa-linkedin"></i>
+                                    </div>
+                                 </div>
+                        
+                           </div>
+                    <div class="profile">
+                        <img src="vandan.jpeg" alt="">
+                        <div class="info">
+                            <h2 class="name">vandan soni</h2>
+                            <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                            <div class="team_icon">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="profile">
+                        <img src="jay.jpg" alt="">
+                        <div class="info">
+                            <h2 class="name">jay shah</h2>
+                            <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                            <div class="team_icon">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <!-- footersectionstarts -->
+        <section class="footer">
+            <div class="box-container">
+                <div class="box">
+                    <h3>about</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor accusantium consequatur labore ad excepturi? Laboriosam autem nisi dolores! Nulla, unde?</p>
+                </div>
+                <div class="box">
+                    <h3>branche location</h3>
+                    <a href="#">anand<i class="fa-solid fa-location-dot"></i></a>
+                    <a href="#">vadodara <i class="fa-solid fa-location-dot"></i></a>
+                    <a href="#">ahemdabad <i class="fa-solid fa-location-dot"></i></a>
+                    <a href="#">nadiad <i class="fa-solid fa-location-dot"></i></a>
+                </div>
+                <div class="box">
+                    <h3>quick links</h3>
+                    <a href="#home">home</a>
+                    <a href="#book">book</a>
+                    <a href="#package">package</a>
+                    <a href="#services">services</a>
+                    <a href="#gallary">gallary</a>
+                    <a href="#review">review</a>
+                    <a href="#contact">contact</a>
+                    
+                </div>
+                <div class="box">
+                    <h3>follow us</h3>
+                    <a href="#">facebook</a>
+                    <a href="#">instagram</a>
+                    <a href="#">twitter</a>
+                    <a href="#">linkdin</a>
+                    
+                    
+                </div>
+            </div>
+            <h1 class="credit">created by <span>prayosha tours and travels</span>  | <img src="c.png" alt=""> all rights reserveds</h1>
+        </section>
+            <script src="a.js"></script>
+    
+</body>
+</html>
